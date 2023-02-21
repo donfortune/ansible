@@ -1,0 +1,31 @@
+
+---
+- name: create nginx web server 
+  hosts: ec2
+  become: true
+  tasks: 
+  - name: install nginx server
+    apt: 
+      name: nginx
+      state: latest
+  - name: start nginx server
+    service: 
+      name: nginx
+      state: started 
+
+---
+- name: uminstall nginx web server 
+  hosts: ec2
+  become: true
+  tasks: 
+  - name: unstall nginx server
+    apt: 
+      name: nginx
+      state: absent
+  - name: stop nginx server
+    service: 
+      name: nginx
+      state: stopped
+      
+
+
