@@ -3,7 +3,7 @@
 18.190.157.52  
 
 [ec2:vars]
-ansible_ssh_private_key_file=~/.ssh/id_rsa 
+ansible_ssh_private_key_file=~/.ssh/id_rsa  #location of private key
 ansible_user=ubuntu. #user is ubuntu server
 
 become_method: sudo
