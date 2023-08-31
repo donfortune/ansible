@@ -1,7 +1,7 @@
 
 ---
 - name: create nginx web server 
-  hosts: ec2
+  hosts: ec2 #referenced from external host file
   become: true
   tasks: 
   - name: install nginx server
