@@ -4,7 +4,7 @@
   hosts: ec2 #referenced from external host file
   become: true
   tasks: 
-  - name: install nginx server
+  - name: install nginx 
     apt: 
       name: nginx
       state: latest
